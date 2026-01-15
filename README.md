@@ -89,6 +89,7 @@ Este proyecto fue diseñado como una base sólida y extensible. Posibles mejoras
 ## Author
 
 Bruno Dinello / Carlos Dutra / Lorenzo Foderé
+
 Machine Learning & Data Science  
 LinkedIn: www.linkedin.com/in/bruno-dinello  
 GitHub: bleacher111  
