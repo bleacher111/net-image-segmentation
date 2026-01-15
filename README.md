@@ -1,6 +1,6 @@
 # U-Net Image Segmentation (PyTorch)
 
-Proyecto end-to-end de segmentación de imágenes binarias utilizando **U-Net en PyTorch**, con **Dice loss**, **Dice metric**, early stopping, visualización de curvas de entrenamiento y pipeline de inferencia listo para generar predicciones tipo Kaggle.
+Proyecto end-to-end de segmentación de imágenes binarias utilizando **U-Net en PyTorch**, con **Dice loss**, **Dice metric**, early stopping, visualización de curvas de entrenamiento y pipeline.
 
 ## Project Overview
 
