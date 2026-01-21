@@ -22,8 +22,6 @@ La estructura del proyecto sigue un formato profesional estándar:
 
 - notebooks → flujo principal de experimentación, entrenamiento y evaluación  
 - src → código reutilizable (métricas, funciones auxiliares, helpers de entrenamiento)  
-- scripts → carpeta prevista para futuras versiones ejecutables  
-- results → outputs como modelos entrenados y predicciones  
 - reports → visualizaciones, gráficos y ejemplos cualitativos  
 - requirements.txt  
 - README.md  
