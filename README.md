@@ -61,29 +61,19 @@ El notebook está organizado para que todo el pipeline sea entendible y reproduc
 
 ## Resultados
 
-Sección editable para agregar resultados reales del experimento.
-
-Formato sugerido:
-
-- Mejor Dice en validación: TBD  
-- Epochs utilizados: TBD  
-- Batch size: TBD  
+- Mejor Dice en validación: 0.942
+- Epochs utilizados: 25  
+- Batch size: 8  
 - Optimizador: Adam  
-- Observaciones:
-  - Qué ayudó a mejorar la performance: TBD  
-  - Principales limitaciones observadas: TBD  
 
 ## Mejoras Posibles
-Este proyecto fue diseñado como una base sólida y extensible. Posibles mejoras futuras incluyen:
+Posibles mejoras futuras incluyen:
 
-- Separar la lógica del notebook en scripts ejecutables  
 - Incorporar configuración externa  
 - Entrenamiento con mixed precision  
 - Mejoras en post-procesamiento de máscaras  
-- Automatización de búsqueda de hiperparámetros  
-- Tests unitarios para métricas y funciones clave  
 
-## Author
+## Autor
 
 Bruno Dinello / Carlos Dutra / Lorenzo Foderé
 
