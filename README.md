@@ -2,7 +2,7 @@
 
 Proyecto end-to-end de segmentación de imágenes binarias utilizando **U-Net en PyTorch**, con **Dice loss**, **Dice metric**, early stopping, visualización de curvas de entrenamiento y pipeline.
 
-## Project Overview
+## Descripción del Propyecto
 
 El proyecto implementa un pipeline completo de deep learning para segmentación de imágenes, incluyendo:
 
@@ -16,7 +16,7 @@ El proyecto implementa un pipeline completo de deep learning para segmentación 
 
 El flujo principal del proyecto se encuentra dentro de la carpeta notebooks.
 
-## Repository Structure
+## Estructura del Repositorio
 
 La estructura del proyecto sigue un formato profesional estándar:
 
@@ -28,7 +28,7 @@ La estructura del proyecto sigue un formato profesional estándar:
 - requirements.txt  
 - README.md  
 
-## Model and Methodology
+## Modelo y metodología
 
 - Arquitectura: **U-Net** (encoder–decoder convolucional)  
 - Tarea: **segmentación binaria de imágenes**  
@@ -42,12 +42,12 @@ La estructura del proyecto sigue un formato profesional estándar:
 
 Las funciones de soporte están implementadas en el archivo src/utils.py.
 
-## Setup
+## Instalación y Configruación
 
 El proyecto está preparado para ejecutarse en un entorno estándar de Python con las dependencias definidas en requirements.txt.  
 Puede utilizarse tanto en CPU como en GPU según la configuración del entorno.
 
-## How to Run
+## Cómo ejecutar el Proyecto
 
 Abrir el notebook principal ubicado en la carpeta notebooks y ejecutar las celdas de arriba hacia abajo.
 
@@ -61,7 +61,7 @@ El flujo incluye:
 
 El notebook está organizado para que todo el pipeline sea entendible y reproducible.
 
-## Results
+## Resultados
 
 Sección editable para agregar resultados reales del experimento.
 
@@ -75,8 +75,7 @@ Formato sugerido:
   - Qué ayudó a mejorar la performance: TBD  
   - Principales limitaciones observadas: TBD  
 
-## Future Improvements
-
+## Mejoras Posibles
 Este proyecto fue diseñado como una base sólida y extensible. Posibles mejoras futuras incluyen:
 
 - Separar la lógica del notebook en scripts ejecutables  
