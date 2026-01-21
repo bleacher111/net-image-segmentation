@@ -1,39 +1,58 @@
 # U-Net Image Segmentation (PyTorch)
 
-Proyecto end-to-end de segmentación de imágenes binarias utilizando U-Net en PyTorch, con Dice loss, Dice metric, early stopping, visualización de curvas de entrenamiento y pipeline completo de entrenamiento e inferencia.
+Este proyecto nace de una pregunta bastante simple:
+¿cómo hace una computadora para “entender” qué hay dentro de una imagen?
 
----
-
-## ¿Qué problema resuelve este proyecto?
-
-La segmentación de imágenes consiste en enseñar a una computadora a **entender qué parte de una imagen corresponde a un objeto específico**.
+No solo reconocer que hay un objeto, sino saber exactamente **dónde empieza y dónde termina**.
 
 Por ejemplo:
-- Detectar tumores en imágenes médicas  
-- Separar calles y edificios en imágenes satelitales  
-- Identificar productos en estanterías  
-- Detectar defectos en control de calidad  
-- Contar personas o vehículos en cámaras  
+- ¿Dónde está un tumor en una imagen médica?
+- ¿Dónde termina una célula y empieza otra?
+- ¿Qué píxeles pertenecen a una calle en una imagen satelital?
+- ¿Qué parte de una imagen corresponde a un producto en una góndola?
 
-En lugar de solo clasificar una imagen, el modelo aprende a **marcar píxel por píxel** qué pertenece al objeto de interés.
+Para responder ese tipo de problemas existe una tarea llamada **segmentación de imágenes**, y uno de los modelos más importantes en la historia de esta área es **U-Net**.
 
 ---
 
-## Objetivo del proyecto
+## Un poco de historia: ¿qué es U-Net y por qué importa?
 
-Construir un sistema completo capaz de:
-- Aprender a segmentar imágenes automáticamente  
-- Evaluar su desempeño con métricas específicas  
+U-Net es una arquitectura de red neuronal creada en 2015 por investigadores de la Universidad de Freiburg, pensada originalmente para analizar imágenes médicas.
+
+Hasta ese momento, muchos modelos:
+- necesitaban miles de imágenes etiquetadas
+- tenían dificultades para lograr precisión pixel por pixel
+
+U-Net introdujo una idea clave:
+combinar una red que **entiende el contexto general de la imagen** con otra que permite **recuperar detalle fino**, conectándolas mediante lo que hoy se conoce como *skip connections*.
+
+Esa estructura en forma de “U” permitió lograr resultados sorprendentes incluso con pocos datos, y desde entonces U-Net se convirtió en:
+- un estándar en segmentación médica  
+- la base de muchísimos modelos modernos  
+- una arquitectura fundamental para entender visión por computadora avanzada  
+
+Hoy existen variantes como U-Net++, Attention U-Net, nnU-Net, entre muchas otras.
+
+---
+
+## Objetivo de este proyecto
+
+El objetivo no fue solo “hacer que funcione”, sino construir un proyecto completo que permita:
+
+- Entender cómo funciona U-Net internamente  
+- Implementar el modelo desde cero en PyTorch  
+- Entrenar y validar con métricas adecuadas  
+- Visualizar resultados y curvas de aprendizaje  
+- Construir un pipeline reproducible  
 - Generar predicciones sobre nuevas imágenes  
-- Visualizar resultados de forma clara  
 
-Todo el flujo está diseñado para ser entendible, reproducible y reutilizable.
+Es decir: pasar de la teoría a un sistema funcional de punta a punta.
 
 ---
 
-## Descripción del proyecto
+## ¿Qué hace exactamente este proyecto?
 
-El proyecto implementa un pipeline completo de deep learning para segmentación de imágenes, incluyendo:
+Este repositorio implementa un pipeline completo de deep learning para segmentación de imágenes, incluyendo:
 
 - Carga y preprocesamiento de datos  
 - Definición del modelo U-Net  
@@ -47,67 +66,36 @@ El flujo principal del proyecto se encuentra dentro de la carpeta `notebooks`.
 
 ---
 
-## Estructura del repositorio
-
-La estructura del proyecto sigue un formato profesional estándar:
-
-- `notebooks` → flujo principal de experimentación, entrenamiento y evaluación  
-- `src` → código reutilizable (métricas, funciones auxiliares, helpers de entrenamiento)  
-- `reports` → visualizaciones, gráficos y ejemplos cualitativos  
-- `requirements.txt`  
-- `README.md`  
-
----
-
-## Modelo y metodología
-
-- Arquitectura: U-Net (encoder–decoder convolucional)  
-- Tarea: segmentación binaria de imágenes  
-- Función de pérdida: Soft Dice Loss  
-- Métrica de evaluación: Dice Coefficient sobre predicciones binarizadas  
-- Optimizador: Adam  
-
-Estrategias aplicadas:
-- Monitoreo en validación  
-- Early stopping  
-- Curvas de pérdida y métrica  
-
-Las funciones de soporte están implementadas en el archivo `src/utils.py`.
-
----
-
-## Cómo ejecutar el Proyecto
-
-Abrir el notebook principal ubicado en la carpeta notebooks y ejecutar las celdas de arriba hacia abajo.
-
-El flujo incluye:
-
-- Carga y preparación de datos  
-- Entrenamiento del modelo  
-- Evaluación en validación  
-- Visualización de métricas  
-- Inferencia sobre nuevas imágenes  
-
-El notebook está organizado para que todo el pipeline sea entendible y reproducible.
-
 ## Resultados
 
-- Mejor Dice en validación: 0.942
+- Mejor Dice en validación: 0.942  
 - Epochs utilizados: 25  
 - Batch size: 8  
 - Optimizador: Adam  
 
-## Mejoras Posibles
-Posibles mejoras futuras incluyen:
+En términos prácticos, esto significa que el modelo logra identificar correctamente la forma de los objetos en imágenes nuevas con alta precisión.
 
-- Incorporar configuración externa  
-- Entrenamiento con mixed precision  
-- Mejoras en post-procesamiento de máscaras  
+---
+
+## ¿Por qué este proyecto es útil más allá del experimento?
+
+Porque este tipo de técnicas se utilizan hoy en:
+- Medicina (diagnóstico asistido por imágenes)
+- Visión artificial en industria
+- Análisis satelital
+- Retail analytics
+- Control de calidad
+- Biología computacional
+- Automatización visual
+
+Este proyecto es una base sólida sobre la que se pueden construir sistemas reales.
+
+---
 
 ## Autor
 
-Bruno Dinello / Carlos Dutra / Lorenzo Foderé
-
+Bruno Dinello / Carlos Dutra / Lorenzo Foderé  
 Machine Learning & Data Science  
-LinkedIn: www.linkedin.com/in/bruno-dinello  
-GitHub: bleacher111  
+LinkedIn: https://www.linkedin.com/in/bruno-dinello  
+GitHub: https://github.com/bleacher111
+
